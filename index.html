@@ -1,52 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HexaIT Signature</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(to right, #1E2A38, #004aad);
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .container {
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        a {
-            color: #00d4ff;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .logo {
-            width: 150px;
-            margin-bottom: 15px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HexaIT - Consultoría IT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f1113;
+      color: #e0e0e0;
+      background-image: url('hexafondo.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    header {
+      background-color: rgba(0, 10, 20, 0.9);
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 2px solid #00bcd4;
+    }
+
+    header h1 {
+      color: #00bcd4;
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      background-color: rgba(0, 10, 20, 0.9);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: #00bcd4;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 5px #00bcd4;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .section {
+      background-color: rgba(15, 17, 19, 0.85);
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,188,212,0.2);
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .section h2 {
+      color: #00bcd4;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .section p {
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background-color: rgba(0, 10, 20, 0.9);
+      text-align: center;
+      padding: 1rem;
+      color: #bbb;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      border-top: 1px solid #00bcd4;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <img src="https://i.imgur.com/XTkX60K.png" alt="HexaIT Logo" class="logo">
-        <h1>IT Infrastructure Consulting</h1>
-        <a href="mailto:hola@hexait.com.ar">hola@hexait.com.ar</a>
+  <header class="fade-in">
+    <h1 style="font-family: 'Segoe UI', sans-serif; font-weight: 600; letter-spacing: 1px; font-size: 3rem; text-shadow: 1px 1px 5px #008c9e;">
+      <i class="fas fa-cubes"></i> HexaIT <span style="font-size: 1.2rem; font-weight: 300; color: #80deea;">- Soluciones en Infraestructura IT</span>
+    </h1>
+  </header>
+
+  <nav class="fade-in">
+    <a href="#zabbix">Zabbix</a>
+    <a href="#consultoria">Consultoría</a>
+    <a href="#virtualizacion">Virtualización</a>
+    <a href="#aws">AWS</a>
+    <a href="#infraestructura">Infraestructura</a>
+    <a href="#seguridad">Seguridad</a>
+  </nav>
+
+  <div class="grid-container">
+    <div id="zabbix" class="section">
+      <h2><i class="fas fa-chart-line"></i> Monitoreo activo con Zabbix</h2>
+      <p>Supervisamos en tiempo real tus servicios críticos para anticiparnos a los problemas antes de que impacten en tu negocio.</p>
     </div>
+
+    <div id="consultoria" class="section">
+      <h2><i class="fas fa-user-tie"></i> Consultoría especializada IT</h2>
+      <p>Diseñamos e implementamos soluciones a medida para optimizar tu infraestructura tecnológica de forma segura y escalable.</p>
+    </div>
+
+    <div id="virtualizacion" class="section">
+      <h2><i class="fas fa-server"></i> Virtualización y nube privada</h2>
+      <p>Implementamos entornos virtualizados y nubes privadas que reducen costos y mejoran la eficiencia operativa de tu empresa.</p>
+    </div>
+
+    <div id="aws" class="section">
+      <h2><i class="fab fa-aws"></i> AWS Cloud</h2>
+      <p>Migramos, gestionamos y optimizamos tu infraestructura en Amazon Web Services para lograr alta disponibilidad y rendimiento.</p>
+    </div>
+
+    <div id="infraestructura" class="section">
+      <h2><i class="fas fa-network-wired"></i> InfraestructuraIT</h2>
+      <p>Desde redes hasta servidores físicos, brindamos soluciones integrales para una infraestructura robusta y moderna.</p>
+    </div>
+
+    <div id="seguridad" class="section">
+      <h2><i class="fas fa-shield-alt"></i> Seguridad y cumplimiento</h2>
+      <p>Implementamos políticas y tecnologías para proteger tus activos digitales y cumplir con normativas nacionales e internacionales.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p style="font-family: 'Segoe UI', sans-serif; font-size: 1rem; font-weight: 300; color: #80deea;">
+      <i class="fas fa-envelope"></i> Contacto:
+      <a href="mailto:hola@hexait.com.ar" style="color: #00bcd4; text-decoration: none; font-weight: 500;">hola@hexait.com.ar</a>
+    </p>
+  </footer>
 </body>
 </html>
